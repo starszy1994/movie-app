@@ -1,5 +1,6 @@
 import React from "react";
 import { useMoviesData } from "../../../hooks/useMoviesData";
+import Movies from "../../Movies/Movies";
 
 
 
@@ -7,10 +8,8 @@ const HomePage = () => {
     
     const {movies, loading, error} = useMoviesData("/popular");
 
-    console.log(movies, loading, error);
-
   return <div>
-    {movies.map(movie => <p key={movie.id}>{movie.title}</p>)}
+    <Movies movies={movies}/>
   </div>;
 };
 
