@@ -1,9 +1,9 @@
 import React from 'react'
 
-const TopFilm = () => {
+const TopFilm = ({}) => {
   return (
     <div>
-      TOP FILM
+      top film
     </div>
   )
 }

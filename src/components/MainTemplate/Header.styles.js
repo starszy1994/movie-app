@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Title = styled.div`
-    width: 90%;
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
@@ -16,7 +16,7 @@ export const Title = styled.div`
     }
 `
 
-export const List = styled.link`
-    color: rgba(255, 255, 255, 0.641);
-    text-decoration: none;
+export const List = styled(Link)`
+    color: black;
+    text-decoration: black;
 `

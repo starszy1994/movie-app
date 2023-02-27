@@ -8,7 +8,7 @@ export const Wrapper = styled.article`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-
+  
   & > h3 {
     background-color: yellow;
     width: 100%;

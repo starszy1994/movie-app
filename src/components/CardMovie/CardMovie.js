@@ -13,7 +13,7 @@ const CardMovie = ({ movie }) => {
       <h3>"{movie.title}"</h3>
       <Styled.Card>
         <marquee
-          scrollamount="2"
+          scrollamount="5"
           scrolldelay-="160"
           behavior="scroll"
           direction="left"
