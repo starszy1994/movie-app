@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const Wrapper = styled.article`
+export const Wrapper = styled.div`
   max-width: 400px;
   overflow: hidden;
   position: relative;
@@ -10,30 +10,31 @@ export const Wrapper = styled.article`
   flex-direction: column;
   
   & > h3 {
-    background-color: yellow;
+    background-color: gray;
     width: 100%;
     margin: 2px;
-    text-align: left;
-    line-height: 60px;
+    text-align: center;
+    line-height: 20px;
     font-size: 15px;
     font-style: italic;
   }
 
   & > img {
     width: 100%;
-    height: 240px;
+    /* height: 240px; */
     object-fit: cover;
+    border-radius: 20%;
   }
 `
 
 export const Card = styled.div`
    position: absolute;
-   bottom: 9px;
-   right: 6px;
-   background-color: gray;
-   padding: 8px;
+   top: 20px;
+   right: 20px;
+   background-color: rgba(12,21,12,0.5);
+   padding: 1px;
    border-radius: 12px;
    font-weight: 800;
    font-size: 1.2rem;
-   color: yellow;
+   color: gold;
 `

@@ -17,6 +17,6 @@ export const Title = styled.div`
 `
 
 export const List = styled(Link)`
-    color: black;
-    text-decoration: black;
+    color: rgba(255, 255, 255, 0.641);
+    text-decoration: none;
 `

@@ -1,8 +1,14 @@
 import styled from "styled-components";
 
-export const Conteiner = styled.div`
-/* display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
-    margin-top: 15px; */
+export const Wrapper = styled.div`
+max-width: 1600px;
+margin: 30px auto;
+width: 100%;
+`
+
+export const Title = styled.h2`
+text-align: center;
+color: black;
+font-size: 40px;
+font-style: italic;
 `

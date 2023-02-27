@@ -6,11 +6,16 @@ import Movies from "../../Movies/Movies";
 
 const HomePage = () => {
     
-    const {movies, loading, error} = useMoviesData("/popular");
+    const {movies:popular , loading, error} = useMoviesData("/popular");
+    const {movies:top_rated} = useMoviesData("/top_rated");
+    const {movies:upcoming} = useMoviesData("/upcoming");
+
 
   return (
     <MainTemplate>
-    <Movies movies={movies}/>
+    <Movies title="Popular Movies" movies={popular}/>
+    <Movies title="Top Rated" movies={top_rated}/>
+    <Movies title="Upcoming" movies={upcoming}/>
     </MainTemplate>
   )
 };

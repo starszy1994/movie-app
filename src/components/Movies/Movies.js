@@ -2,19 +2,29 @@ import React from "react";
 import CardMovie from "../CardMovie/CardMovie";
 import * as Styled from "./Movies.styles";
 import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
 
-const Movies = ({ movies }) => {
+const Movies = ({ movies, title }) => {
   return (
-    <Styled.Conteiner>
+    <Styled.Wrapper>
+      <Styled.Title>{title}</Styled.Title>
       <Swiper
-        // install Swiper modules
-        spaceBetween={50}
-        slidesPerView={3}
-        // navigation
-        // pagination={{ clickable: true }}
-        // scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
+        spaceBetween={20}
+        slidesPerView={2}
+        breakpoints={{
+          640: {
+            width:640,
+            slidesPerView:2
+          },
+          768: {
+            width:768,
+            slidesPerView:3
+          },
+          992: {
+            width:992,
+            slidesPerView:3
+          }
+        }}
       >
         {movies.map((movie) => (
           <SwiperSlide key={movie.id}>
@@ -22,8 +32,10 @@ const Movies = ({ movies }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </Styled.Conteiner>
+      </Styled.Wrapper>
   );
 };
+
+// najwyżej oceniane i najnowsze
 
 export default Movies;
