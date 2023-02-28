@@ -9,21 +9,13 @@ const Header = () => {
       <Link to="/">
         <img src={logo1} alt="Movie Page" />
       </Link>
-      <nav>
-        <Styled.List>
-          <ul>
-          <li>
-            <Link to="/topfilm">Top Film</Link>
-          </li>
-          <li>
-            <Link to="/">Home Page</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          </ul>
-        </Styled.List>
-      </nav>
+      <div>
+          <Styled.List to="/topfilm">TV Serial</Styled.List>
+
+          <Styled.List to="/">Home Page</Styled.List>
+
+          <Styled.List to="/contact">Contact</Styled.List>
+      </div>
     </Styled.Title>
   );
 };
