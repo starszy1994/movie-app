@@ -17,8 +17,8 @@ const FeaturedMovie = ({featured}) => {
            Premiere: {featured.release_date}
         </Styled.Data>
         <Styled.Vote>
-      Vote rating: {featured.vote_average}
-      Vote count: {featured.vote_count}
+      <span>Vote rating: {featured.vote_average}⭐</span>
+      <span>Vote count: {featured.vote_count}✔</span>
       </Styled.Vote>
       </div>
     </Styled.Wrapper>

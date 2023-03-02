@@ -26,7 +26,7 @@ const Movies = ({ movies, title }) => {
           }
         }}
       >
-        {movies.map((movie) => (
+        {movies?.map((movie) => (
           <SwiperSlide key={movie.id}>
             <CardMovie movie={movie} />
           </SwiperSlide>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 
 export const Wrapper = styled.div`
@@ -8,6 +9,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+
   
   & > h3 {
     background-color: gray;
@@ -17,6 +19,10 @@ export const Wrapper = styled.div`
     line-height: 20px;
     font-size: 15px;
     font-style: italic;
+  }
+
+  & a {
+
   }
 
   & > img {
@@ -37,4 +43,9 @@ export const Card = styled.div`
    font-weight: 800;
    font-size: 1.2rem;
    color: gold;
+`
+
+export const Linkaa = styled(Link)`
+text-decoration: none;
+color: black;
 `

@@ -8,9 +8,9 @@ import Newsletter from "../../Newsletter/Newsletter";
 
 const HomePage = () => {
     
-    const {movies:popular , loading, error} = useMoviesData("/popular");
-    const {movies:top_rated} = useMoviesData("/top_rated");
-    const {movies:upcoming} = useMoviesData("/upcoming");
+    const {movies:popular , loading, error} = useMoviesData("movie/popular");
+    const {movies:top_rated} = useMoviesData("movie/top_rated");
+    const {movies:upcoming} = useMoviesData("movie/upcoming");
 
     const [featured, setFeatured] = useState();
 
@@ -20,17 +20,18 @@ featuredMovie();
     }, [popular]);
 
     const featuredMovie = () => {
-      const result = Math.floor(Math.random()*popular.length)
-      setFeatured(popular[result]);
+      if (!popular?.results) return;
+      const result = Math.floor(Math.random()*popular.results.length)
+      setFeatured(popular.results[result]);
     }
 
     console.log(featured)
 
   return (
     <MainTemplate>
-    <Movies title="Popular Movies" movies={popular}/>
-    <Movies title="Top Rated" movies={top_rated}/>
-    <Movies title="Upcoming" movies={upcoming}/>
+    <Movies title="Popular Movies" movies={popular?.results}/>
+    <Movies title="Top Rated" movies={top_rated?.results}/>
+    <Movies title="Upcoming" movies={upcoming?.results}/>
     {featured ? <FeaturedMovie featured={featured}/> : "coming"}
     <Newsletter/>
     </MainTemplate>

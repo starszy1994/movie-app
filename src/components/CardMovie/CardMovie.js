@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import * as Styled from "./CardMovie.styles";
 
 // image.tmdb.org/t/p/w500/${movie.poster_path} "/qi9r5xBgcc9KTxlOLjssEbDgO0J.jpg"
 
 const CardMovie = ({ movie }) => {
   return (
+    <Styled.Linkaa to={`/movie/${movie.id}`}>
     <Styled.Wrapper>
       <img
         src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`}
@@ -22,6 +24,7 @@ const CardMovie = ({ movie }) => {
         </marquee>
       </Styled.Card>
     </Styled.Wrapper>
+    </Styled.Linkaa>
   );
 };
 
