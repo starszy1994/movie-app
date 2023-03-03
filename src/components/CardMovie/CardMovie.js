@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import * as Styled from "./CardMovie.styles";
 
 // image.tmdb.org/t/p/w500/${movie.poster_path} "/qi9r5xBgcc9KTxlOLjssEbDgO0J.jpg"

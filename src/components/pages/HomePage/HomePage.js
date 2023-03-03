@@ -4,6 +4,7 @@ import FeaturedMovie from "../../FeaturedMovie/FeaturedMovie";
 import MainTemplate from "../../MainTemplate/MainTemplate";
 import Movies from "../../Movies/Movies";
 import Newsletter from "../../Newsletter/Newsletter";
+import SearchPage from "../SearchPage/SearchPage";
 
 
 const HomePage = () => {

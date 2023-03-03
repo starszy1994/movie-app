@@ -6,7 +6,7 @@ export const Title = styled.div`
   flex-direction: row;
   justify-content: space-between;
   max-width: 100%;
-  margin-top: 20px;
+  margin-top: 100px;
 
   align-items: center;
   display: flex;
@@ -16,6 +16,7 @@ export const Title = styled.div`
   & > img {
     height: 15px;
     object-fit: cover;
+    margin-top: 50px;
   }
 `;
 

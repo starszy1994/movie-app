@@ -4,6 +4,7 @@ import HomePage from "./components/pages/HomePage/HomePage";
 import MoviePage from "./components/pages/MoviePage/MoviePage";
 import TopFilm from "./components/pages/TopFilm/TopFilm";
 import Contact from "./components/pages/Contact/Contact";
+import SearchPage from "./components/pages/SearchPage/SearchPage";
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/movie/:id" element={<MoviePage />} />
           <Route path="/topfilm" element={<TopFilm />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path='/search' element={<SearchPage/>}/>
         </Routes>
       </BrowserRouter>
     </>
