@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Wpis = styled.div`
 text-align: center;
+margin-top: 150px;
 `
 
 export const Wrapper = styled.h1`

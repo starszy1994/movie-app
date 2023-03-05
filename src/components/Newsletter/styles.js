@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 export const Title = styled.h2`
     border-radius: 20px;
     background-color: rgb(22,22,22);
-    width: 90%;
+    width: 100%;
     max-width: 1440px;
     margin: auto;
     text-align: center;

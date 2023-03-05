@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import * as Styled from "./styles"
+import Header from "../../MainTemplate/Header";
+import BottomPage from "../../MainTemplate/BottomPage";
 
 const SearchPage = () => {
   const [query, setQuery] = useState("");
@@ -26,19 +28,25 @@ const SearchPage = () => {
 
   return (
     <Styled.Wrapper>
+      <Header>    </Header>
     <div>
         <Styled.Wpis>
       <input value={query} onChange={handleChange} placeholder="Search movie" />
       </Styled.Wpis>
       <Styled.Wynik>
+        <div>
         {!movies.length ? (
           <p>Not found</p>
         ) : (
-          movies.map((movie) => <p key={movie.id}>{movie.title} Year: {movie.release_date} Vote average: {movie.vote_average}</p>)
+          movies.map((movie) => <p key={movie.id}> "{movie.title}"
+          Year: {movie.release_date} "{movie.vote_average}⭐"</p>)
         )}
+        </div>
       </Styled.Wynik>
     </div>
+    <BottomPage></BottomPage>
     </Styled.Wrapper>
+
   );
 };
 

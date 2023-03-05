@@ -1,6 +1,7 @@
 import React, {Suspense, useEffect, useState} from "react";
 import { useMoviesData } from "../../../hooks/useMoviesData";
 import FeaturedMovie from "../../FeaturedMovie/FeaturedMovie";
+import BottomPage from "../../MainTemplate/BottomPage";
 import MainTemplate from "../../MainTemplate/MainTemplate";
 import Movies from "../../Movies/Movies";
 import Newsletter from "../../Newsletter/Newsletter";
@@ -35,6 +36,7 @@ featuredMovie();
     <Movies title="Upcoming" movies={upcoming?.results}/>
     {featured ? <FeaturedMovie featured={featured}/> : "coming"}
     <Newsletter/>
+    <BottomPage/>
     </MainTemplate>
   )
 };

@@ -7,6 +7,7 @@ export const Title = styled.div`
   justify-content: space-between;
   max-width: 100%;
   margin-top: 100px;
+  margin-bottom: 20px;
 
   align-items: center;
   display: flex;
@@ -22,9 +23,9 @@ export const Title = styled.div`
 
 export const List = styled(Link)`
   width: 70%;
-  font-size: 30px;
+  font-size: 25px;
   color: white;
   text-decoration: none;
-  margin-left: 200px;
+  margin-left: 20px;
   font-style: italic;
 `;
