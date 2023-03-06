@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import * as Styled from "./styles"
+import * as Styled from "./styles";
 import Header from "../../MainTemplate/Header";
 import BottomPage from "../../MainTemplate/BottomPage";
+import MainTemplate from "../../MainTemplate/MainTemplate";
 
 const SearchPage = () => {
   const [query, setQuery] = useState("");
@@ -27,26 +28,35 @@ const SearchPage = () => {
   };
 
   return (
+    <MainTemplate>
     <Styled.Wrapper>
-      <Header>    </Header>
-    <div>
+      <div>
         <Styled.Wpis>
-      <input value={query} onChange={handleChange} placeholder="Search movie" />
-      </Styled.Wpis>
-      <Styled.Wynik>
-        <div>
-        {!movies.length ? (
-          <p>Not found</p>
-        ) : (
-          movies.map((movie) => <p key={movie.id}> "{movie.title}"
-          Year: {movie.release_date} "{movie.vote_average}⭐"</p>)
-        )}
-        </div>
-      </Styled.Wynik>
-    </div>
-    <BottomPage></BottomPage>
+          <input
+            value={query}
+            onChange={handleChange}
+            placeholder="Search movie"
+          />
+        </Styled.Wpis>
+        <Styled.Wynik>
+          <div>
+            {!movies.length ? (
+              <p>Not found</p>
+            ) : (
+              movies.map((movie) => (
+                <Styled.LinkMovie to={`/movie/${movie.id}`} key={movie.id}>
+                  {" "}
+                  "{movie.title}" Year: {movie.release_date} "
+                  {movie.vote_average}⭐"
+                </Styled.LinkMovie>
+              ))
+            )}
+          </div>
+        </Styled.Wynik>
+      </div>
+      <BottomPage/>
     </Styled.Wrapper>
-
+    </MainTemplate>
   );
 };
 

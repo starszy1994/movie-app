@@ -5,9 +5,8 @@ export const Title = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 100%;
-  margin-top: 100px;
-  margin-bottom: 20px;
+  max-width: 80%;
+  margin: 100px auto 20px;
 
   align-items: center;
   display: flex;

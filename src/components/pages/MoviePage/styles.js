@@ -6,6 +6,8 @@ margin-top: 50px;
 font-size: 20px;
 display: flex;
   flex-direction: row;
+  max-width: 80%;
+  margin: 30px auto;
 
 
 & > img {

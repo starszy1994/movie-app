@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 
-export const Wrapper = styled.h2`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
+  margin: 30px auto;
+  max-width: 80%;
+  border: black solid 4px;
 
   & > img {
     max-width: 30%;
@@ -14,6 +17,7 @@ export const Subtitle = styled.h4`
 font-size: 15px;
 margin-left: 10px;
 margin-bottom: 100px;
+
 
 `
 

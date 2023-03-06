@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useMoviesData } from "../../../hooks/useMoviesData";
+import BottomPage from "../../MainTemplate/BottomPage";
 import Header from "../../MainTemplate/Header";
+import MainTemplate from "../../MainTemplate/MainTemplate";
 import * as Styled from "./styles";
 
 const MoviePage = () => {
@@ -17,9 +19,7 @@ const MoviePage = () => {
 
   return (
 <div>
-      <Styled.Heder>
-        <Header></Header>
-      </Styled.Heder>
+<MainTemplate>
 
           <Styled.Wrapper>
       <div>
@@ -40,13 +40,15 @@ const MoviePage = () => {
             <p>{movie.overview}</p>
           </Styled.Subtitle>
           <Styled.Homepage>
-            <a href={movie.homepage}>Original page: {movie.title}</a>
+            <a href={movie.homepage} target="_blank">Original page: {movie.title}</a>
             <p>Category: {movie.genres[0].name}</p>
             <p>Total budget: {movie.budget}$</p>
           </Styled.Homepage>
         </div>
       </Styled.Title>
     </Styled.Wrapper>
+    <BottomPage></BottomPage>
+    </MainTemplate>
     </div>
   );
 };

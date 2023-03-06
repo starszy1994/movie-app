@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -8,7 +9,7 @@ export const Wrapper = styled.div`
 export const Title = styled.h2`
     border-radius: 20px;
     background-color: rgb(22,22,22);
-    width: 100%;
+    width: 80%;
     max-width: 1440px;
     margin: auto;
     text-align: center;
@@ -19,7 +20,7 @@ export const Title = styled.h2`
 export const Mail = styled.input`
     width: 60%;
     max-width: 1440px;
-    text-align: auto;
+    text-align: center;
     border-radius: 30px;
     height: 30px;
     float: center;
@@ -30,4 +31,8 @@ export const Info = styled.p`
     color: red;
     margin-left: 65px;
     font-size: 10px;
+`
+
+export const LinkMovie = styled(Link)`
+text-decoration: none;
 `

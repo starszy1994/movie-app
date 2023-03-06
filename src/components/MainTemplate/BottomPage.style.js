@@ -8,8 +8,9 @@ margin-top: 50px;
 export const Title = styled.h1`
 display: flex;
 flex-direction: row;
-justify-content: space-between;
+justify-content: space-around;
 font-size: 20px;
+margin-right: 20px;
 
 & > p {
     font-size: 10px;

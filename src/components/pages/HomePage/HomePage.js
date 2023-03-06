@@ -5,7 +5,9 @@ import BottomPage from "../../MainTemplate/BottomPage";
 import MainTemplate from "../../MainTemplate/MainTemplate";
 import Movies from "../../Movies/Movies";
 import Newsletter from "../../Newsletter/Newsletter";
-import SearchPage from "../SearchPage/SearchPage";
+import {GiPopcorn} from 'react-icons/gi'
+import {TbWaveSawTool} from 'react-icons/tb'
+import {GiIncomingRocket} from 'react-icons/gi'
 
 
 const HomePage = () => {
@@ -31,9 +33,9 @@ featuredMovie();
 
   return (
     <MainTemplate>
-    <Movies title="Popular Movies" movies={popular?.results}/>
-    <Movies title="Top Rated" movies={top_rated?.results}/>
-    <Movies title="Upcoming" movies={upcoming?.results}/>
+    <Movies title="Popular Movies" movies={popular?.results} icon={<GiPopcorn/>}/>
+    <Movies title="Top Rated" movies={top_rated?.results} icon={<TbWaveSawTool/>} />
+    <Movies title="Upcoming" movies={upcoming?.results} icon={<GiIncomingRocket/>} />
     {featured ? <FeaturedMovie featured={featured}/> : "coming"}
     <Newsletter/>
     <BottomPage/>
