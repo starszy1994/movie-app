@@ -6,7 +6,7 @@ export const Title = styled.div`
   flex-direction: row;
   justify-content: space-between;
   max-width: 80%;
-  margin: 100px auto 20px;
+  margin: 100px auto 100px;
 
   align-items: center;
   display: flex;
@@ -22,7 +22,7 @@ export const Title = styled.div`
 
 export const List = styled(Link)`
   width: 70%;
-  font-size: 25px;
+  font-size: 40px;
   color: white;
   text-decoration: none;
   margin-left: 20px;

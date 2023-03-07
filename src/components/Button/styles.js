@@ -10,4 +10,5 @@ background-image: linear-gradient(hsl(176, 55%, 52%), hsl(198, 60%, 50%));
     margin: 15px;
     border-radius: 25px;
     cursor: pointer;
+    font-size: 20px;
     `

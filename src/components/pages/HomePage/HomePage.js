@@ -33,9 +33,9 @@ featuredMovie();
 
   return (
     <MainTemplate>
-    <Movies title="Popular Movies" movies={popular?.results} icon={<GiPopcorn/>}/>
-    <Movies title="Top Rated" movies={top_rated?.results} icon={<TbWaveSawTool/>} />
-    <Movies title="Upcoming" movies={upcoming?.results} icon={<GiIncomingRocket/>} />
+    <Movies title="POPULAR MOVIES" movies={popular?.results} icon={<GiPopcorn/>}/>
+    <Movies title="TOP RATED" movies={top_rated?.results} icon={<TbWaveSawTool/>} />
+    <Movies title="UPCOMING" movies={upcoming?.results} icon={<GiIncomingRocket/>} />
     {featured ? <FeaturedMovie featured={featured}/> : "coming"}
     <Newsletter/>
     <BottomPage/>

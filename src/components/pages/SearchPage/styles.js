@@ -10,6 +10,7 @@ margin-top: 150px;
     height: 25px;
     text-align: center;
     border: black solid 6px;
+    font-size: 20px;
 }
 `
 
@@ -18,7 +19,6 @@ export const Wrapper = styled.h1`
 
 export const Wynik = styled.p`
 font-size: 30px;
-font-style: italic;
 text-align: center;
 `
 export const LinkMovie = styled(Link)`
