@@ -1,4 +1,4 @@
-import React, {Suspense, useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import { useMoviesData } from "../../../hooks/useMoviesData";
 import FeaturedMovie from "../../FeaturedMovie/FeaturedMovie";
 import BottomPage from "../../MainTemplate/BottomPage";
@@ -8,6 +8,8 @@ import Newsletter from "../../Newsletter/Newsletter";
 import {GiPopcorn} from 'react-icons/gi'
 import {TbWaveSawTool} from 'react-icons/tb'
 import {GiIncomingRocket} from 'react-icons/gi'
+import { Button } from "../../Button/styles";
+
 
 
 const HomePage = () => {
@@ -31,12 +33,15 @@ featuredMovie();
 
     console.log(featured)
 
+    
+
   return (
     <MainTemplate>
+          {featured ? <FeaturedMovie featured={featured}/> : "coming"}
     <Movies title="POPULAR MOVIES" movies={popular?.results} icon={<GiPopcorn/>}/>
     <Movies title="TOP RATED" movies={top_rated?.results} icon={<TbWaveSawTool/>} />
     <Movies title="UPCOMING" movies={upcoming?.results} icon={<GiIncomingRocket/>} />
-    {featured ? <FeaturedMovie featured={featured}/> : "coming"}
+
     <Newsletter/>
     <BottomPage/>
     </MainTemplate>

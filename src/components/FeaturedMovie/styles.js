@@ -2,38 +2,45 @@ import styled from "styled-components";
 
 
 export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin: 200px auto;
-  max-width: 80%;
-  border: black solid 4px;
-  color: azure;
+background: rgba(0, 0, 0, 0.2);
+display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  height: 520px;
 
   & > img {
-    max-width: 30%;
+    width: 80%;
+    object-fit: cover;
+    height: 520px;
   }
 `
 
 export const Subtitle = styled.h4`
-font-size: 25px;
-margin-left: 80px;
-margin-right: 80px;
-margin-bottom: 100px;
+font-size: 20px;
 
 
 `
 
 export const Title = styled.h1`
-font-size: 60px;
-margin-left: 10px;
+font-size: 30px;
+margin: auto;
 text-align: center;
-margin-bottom: 60px;
 `
 
 
 export const Vote = styled.p`
-  display: flex;
-  justify-content: space-around;
   text-align: right;
-  font-size: 20px;
+  font-size: 12px;
+  margin-right: 20px;
+`
+
+export const Topka = styled.h1`
+text-align: center;
+font-size: 50px;
+`
+
+export const Lottery = styled.h1`
+text-align: center;
 `

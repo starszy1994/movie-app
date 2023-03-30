@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <Styled.Title>
       <Link to="/">
-        <img src={logo1} alt="Movie Page" />
+        <img src={logo1} alt="/" />
       </Link>
       <div>
         <Styled.List to="/"><TiHome color="black"/>  Home Page</Styled.List>
